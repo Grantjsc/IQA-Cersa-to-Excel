@@ -34,14 +34,21 @@ Partial Class Form1
         Me.txtReading = New Guna.UI2.WinForms.Guna2TextBox()
         Me.btnGo = New Guna.UI2.WinForms.Guna2Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.Label2 = New System.Windows.Forms.Label()
         Me.lblfooter2 = New System.Windows.Forms.Label()
         Me.lblfooter1 = New System.Windows.Forms.Label()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.txtPartNumber = New System.Windows.Forms.TextBox()
+        Me.txtCoversion = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.lblUoM = New System.Windows.Forms.Label()
+        Me.btnClear = New Guna.UI2.WinForms.Guna2Button()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Guna2CustomGradientPanel2.SuspendLayout()
         Me.Panel1.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'SerialPort1
@@ -126,10 +133,10 @@ Partial Class Form1
         Me.txtReading.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.txtReading.FillColor = System.Drawing.Color.Black
         Me.txtReading.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtReading.Font = New System.Drawing.Font("Lucida Fax", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtReading.Font = New System.Drawing.Font("Lucida Fax", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtReading.ForeColor = System.Drawing.Color.Lime
         Me.txtReading.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtReading.Location = New System.Drawing.Point(53, 130)
+        Me.txtReading.Location = New System.Drawing.Point(20, 196)
         Me.txtReading.Margin = New System.Windows.Forms.Padding(3, 6, 3, 6)
         Me.txtReading.Name = "txtReading"
         Me.txtReading.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -140,7 +147,7 @@ Partial Class Form1
         Me.txtReading.ShadowDecoration.Color = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.txtReading.ShadowDecoration.Enabled = True
         Me.txtReading.ShadowDecoration.Shadow = New System.Windows.Forms.Padding(0, 0, 10, 10)
-        Me.txtReading.Size = New System.Drawing.Size(316, 71)
+        Me.txtReading.Size = New System.Drawing.Size(146, 46)
         Me.txtReading.TabIndex = 42
         Me.txtReading.TabStop = False
         Me.txtReading.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
@@ -165,7 +172,7 @@ Partial Class Form1
         Me.btnGo.HoverState.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnGo.HoverState.ForeColor = System.Drawing.Color.White
         Me.btnGo.ImageSize = New System.Drawing.Size(30, 30)
-        Me.btnGo.Location = New System.Drawing.Point(150, 239)
+        Me.btnGo.Location = New System.Drawing.Point(78, 273)
         Me.btnGo.Margin = New System.Windows.Forms.Padding(2)
         Me.btnGo.Name = "btnGo"
         Me.btnGo.ShadowDecoration.BorderRadius = 18
@@ -179,6 +186,12 @@ Partial Class Form1
         '
         'Panel1
         '
+        Me.Panel1.Controls.Add(Me.btnClear)
+        Me.Panel1.Controls.Add(Me.txtCoversion)
+        Me.Panel1.Controls.Add(Me.PictureBox1)
+        Me.Panel1.Controls.Add(Me.lblUoM)
+        Me.Panel1.Controls.Add(Me.Label3)
+        Me.Panel1.Controls.Add(Me.txtPartNumber)
         Me.Panel1.Controls.Add(Me.lblfooter2)
         Me.Panel1.Controls.Add(Me.lblfooter1)
         Me.Panel1.Controls.Add(Me.TextBox1)
@@ -189,26 +202,8 @@ Partial Class Form1
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel1.Location = New System.Drawing.Point(0, 24)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(417, 346)
+        Me.Panel1.Size = New System.Drawing.Size(417, 371)
         Me.Panel1.TabIndex = 54
-        '
-        'TextBox1
-        '
-        Me.TextBox1.Location = New System.Drawing.Point(32, 74)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox1.TabIndex = 62
-        Me.TextBox1.Visible = False
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Segoe UI", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(164, 87)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(96, 37)
-        Me.Label2.TabIndex = 61
-        Me.Label2.Text = "Result"
         '
         'lblfooter2
         '
@@ -216,7 +211,7 @@ Partial Class Form1
         Me.lblfooter2.BackColor = System.Drawing.Color.Transparent
         Me.lblfooter2.Font = New System.Drawing.Font("Nirmala UI", 6.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblfooter2.ForeColor = System.Drawing.Color.Black
-        Me.lblfooter2.Location = New System.Drawing.Point(9, 319)
+        Me.lblfooter2.Location = New System.Drawing.Point(1, 352)
         Me.lblfooter2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblfooter2.Name = "lblfooter2"
         Me.lblfooter2.Size = New System.Drawing.Size(108, 12)
@@ -229,18 +224,149 @@ Partial Class Form1
         Me.lblfooter1.BackColor = System.Drawing.Color.Transparent
         Me.lblfooter1.Font = New System.Drawing.Font("Nirmala UI", 6.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblfooter1.ForeColor = System.Drawing.Color.Black
-        Me.lblfooter1.Location = New System.Drawing.Point(11, 308)
+        Me.lblfooter1.Location = New System.Drawing.Point(3, 341)
         Me.lblfooter1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblfooter1.Name = "lblfooter1"
         Me.lblfooter1.Size = New System.Drawing.Size(133, 12)
         Me.lblfooter1.TabIndex = 65
         Me.lblfooter1.Text = "LITTELFUSE PHILIPPINES INC." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
         '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(5, 318)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox1.TabIndex = 62
+        Me.TextBox1.Visible = False
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(38, 165)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(114, 25)
+        Me.Label2.TabIndex = 61
+        Me.Label2.Text = "Result (µm)"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.BackColor = System.Drawing.Color.Transparent
+        Me.Label3.Font = New System.Drawing.Font("Arial Black", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.Color.Black
+        Me.Label3.Location = New System.Drawing.Point(64, 85)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(151, 27)
+        Me.Label3.TabIndex = 67
+        Me.Label3.Text = "Part Number:"
+        '
+        'txtPartNumber
+        '
+        Me.txtPartNumber.Font = New System.Drawing.Font("Arial", 17.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtPartNumber.ForeColor = System.Drawing.Color.Silver
+        Me.txtPartNumber.Location = New System.Drawing.Point(60, 114)
+        Me.txtPartNumber.Margin = New System.Windows.Forms.Padding(2)
+        Me.txtPartNumber.Name = "txtPartNumber"
+        Me.txtPartNumber.Size = New System.Drawing.Size(296, 34)
+        Me.txtPartNumber.TabIndex = 68
+        Me.txtPartNumber.Text = "Enter part number"
+        Me.txtPartNumber.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'txtCoversion
+        '
+        Me.txtCoversion.BackColor = System.Drawing.Color.Transparent
+        Me.txtCoversion.BorderColor = System.Drawing.Color.Black
+        Me.txtCoversion.BorderRadius = 20
+        Me.txtCoversion.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txtCoversion.DefaultText = ""
+        Me.txtCoversion.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.txtCoversion.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.txtCoversion.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtCoversion.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtCoversion.FillColor = System.Drawing.Color.Black
+        Me.txtCoversion.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtCoversion.Font = New System.Drawing.Font("Lucida Fax", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtCoversion.ForeColor = System.Drawing.Color.Lime
+        Me.txtCoversion.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtCoversion.Location = New System.Drawing.Point(251, 196)
+        Me.txtCoversion.Margin = New System.Windows.Forms.Padding(2, 4, 2, 4)
+        Me.txtCoversion.Name = "txtCoversion"
+        Me.txtCoversion.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.txtCoversion.PlaceholderText = ""
+        Me.txtCoversion.ReadOnly = True
+        Me.txtCoversion.SelectedText = ""
+        Me.txtCoversion.ShadowDecoration.BorderRadius = 30
+        Me.txtCoversion.ShadowDecoration.Color = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.txtCoversion.ShadowDecoration.Enabled = True
+        Me.txtCoversion.ShadowDecoration.Shadow = New System.Windows.Forms.Padding(0, 0, 10, 10)
+        Me.txtCoversion.Size = New System.Drawing.Size(146, 46)
+        Me.txtCoversion.TabIndex = 69
+        Me.txtCoversion.TabStop = False
+        Me.txtCoversion.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
+        Me.PictureBox1.Location = New System.Drawing.Point(179, 194)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(58, 48)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 71
+        Me.PictureBox1.TabStop = False
+        '
+        'lblUoM
+        '
+        Me.lblUoM.AutoSize = True
+        Me.lblUoM.BackColor = System.Drawing.Color.Transparent
+        Me.lblUoM.Font = New System.Drawing.Font("Segoe UI Black", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblUoM.ForeColor = System.Drawing.Color.Black
+        Me.lblUoM.Location = New System.Drawing.Point(297, 165)
+        Me.lblUoM.Name = "lblUoM"
+        Me.lblUoM.Size = New System.Drawing.Size(57, 25)
+        Me.lblUoM.TabIndex = 70
+        Me.lblUoM.Text = "UoM"
+        Me.lblUoM.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'btnClear
+        '
+        Me.btnClear.BackColor = System.Drawing.Color.Transparent
+        Me.btnClear.BorderColor = System.Drawing.Color.Red
+        Me.btnClear.BorderRadius = 18
+        Me.btnClear.BorderThickness = 3
+        Me.btnClear.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnClear.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.btnClear.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.btnClear.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.btnClear.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.btnClear.FillColor = System.Drawing.Color.White
+        Me.btnClear.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnClear.ForeColor = System.Drawing.Color.Red
+        Me.btnClear.HoverState.BorderColor = System.Drawing.Color.Red
+        Me.btnClear.HoverState.CustomBorderColor = System.Drawing.Color.Red
+        Me.btnClear.HoverState.FillColor = System.Drawing.Color.Red
+        Me.btnClear.HoverState.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnClear.HoverState.ForeColor = System.Drawing.Color.White
+        Me.btnClear.ImageSize = New System.Drawing.Size(30, 30)
+        Me.btnClear.Location = New System.Drawing.Point(219, 273)
+        Me.btnClear.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnClear.Name = "btnClear"
+        Me.btnClear.ShadowDecoration.BorderRadius = 18
+        Me.btnClear.ShadowDecoration.Color = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.btnClear.ShadowDecoration.Depth = 20
+        Me.btnClear.ShadowDecoration.Enabled = True
+        Me.btnClear.ShadowDecoration.Shadow = New System.Windows.Forms.Padding(8)
+        Me.btnClear.Size = New System.Drawing.Size(110, 39)
+        Me.btnClear.TabIndex = 72
+        Me.btnClear.Text = "Clear"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(417, 370)
+        Me.ClientSize = New System.Drawing.Size(417, 395)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.MenuStrip1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
@@ -254,6 +380,7 @@ Partial Class Form1
         Me.Guna2CustomGradientPanel2.PerformLayout()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -273,4 +400,10 @@ Partial Class Form1
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents lblfooter2 As Label
     Friend WithEvents lblfooter1 As Label
+    Friend WithEvents txtCoversion As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents lblUoM As Label
+    Friend WithEvents Label3 As Label
+    Friend WithEvents txtPartNumber As TextBox
+    Friend WithEvents btnClear As Guna.UI2.WinForms.Guna2Button
 End Class
